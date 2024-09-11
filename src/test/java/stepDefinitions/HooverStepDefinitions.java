@@ -5,6 +5,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +29,17 @@ public class HooverStepDefinitions {
     @When("there are dirt patches at the following coordinates:")
     public void there_are_dirt_patches_at_the_following_coordinates(io.cucumber.datatable.DataTable dataTable) {
         requestBody.put("patches", dataTable.asLists(Integer.class));
+    }
+
+    @When("there are no dirt patches")
+    public void there_are_no_dirt_patches() {
+        requestBody.put("patches", new ArrayList<>());
+    }
+
+    @Then("the system should return an error")
+    public void the_system_should_return_an_error() {
+        response.then()
+                .statusCode(400);
     }
 
     @When("the hoover receives the instructions {string}")
