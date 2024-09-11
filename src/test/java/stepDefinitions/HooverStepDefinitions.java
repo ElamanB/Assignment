@@ -50,7 +50,7 @@ public class HooverStepDefinitions {
                 .contentType("application/json")
                 .body(requestBody)
                 .when()
-                .post("http://localhost:8081/v1/cleaning-sessions");
+                .post("http://localhost:8080/v1/cleaning-sessions");
         System.out.println("Response Body: " + response.getBody().asString());
 
     }
