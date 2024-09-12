@@ -98,8 +98,16 @@ Note: Once this bug is fixed, all 16 test cases are expected to run successfully
 16. Scenario: Hoover moves within bounds and cleans all patches
     * Explanation: Verifies that the Hoover can follow the given instructions, stay within bounds, and clean all the dirt patches present in the room.
 
+## Summary of the Technology Stack
 
-
+* Java 21: Main programming language.
+* Apache Maven: Build and dependency management tool.
+* Cucumber: For BDD testing and writing Gherkin-based scenarios.
+* JUnit 5: For executing unit and integration tests, with assertions and validations in the tests.
+* RestAssured: For API testing.
+* Jackson and Gson: For JSON serialization and deserialization.
+* Maven Compiler Plugin: Used to compile the Java code.
+* Postman: Used for manual API testing of various scenarios.
 
 
 
