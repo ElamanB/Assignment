@@ -1,4 +1,4 @@
-Feature: Hoover navigation and cleaning
+Feature: Hoover Room Navigation and Dirt Cleaning
 
 
   @smoke @noDirtPatches
